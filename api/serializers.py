@@ -7,3 +7,9 @@ class GenreSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'image')
         read_only_fields = ('id')
 
+class CharacterSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Character
+        fields = ('id', 'name', 'image', 'age', 'weight', 'story')
+        read_only_fields = ('id')
+
